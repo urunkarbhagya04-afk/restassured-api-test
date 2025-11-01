@@ -1,4 +1,4 @@
-# RestAssured API Test Automation 🚀
+# RestAssured API Test Automation 
 
 ![Build Status](https://github.com/urunkarbhagya04-afk/restassured-api-test/actions/workflows/maven-test.yml/badge.svg)
 
