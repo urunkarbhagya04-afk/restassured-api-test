@@ -19,11 +19,5 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            echo 'Build completed. Check test results below.'
-        }
-    }
 }
 
