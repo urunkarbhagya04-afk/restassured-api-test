@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'
         jdk 'JDK17'
+        maven 'Maven'
     }
 
     stages {
@@ -15,12 +15,16 @@ pipeline {
 
         stage('Build & Test') {
             steps {
+                echo '🧪 Running Maven tests...'
                 sh 'mvn clean test'
             }
         }
     }
 
     post {
+        always {
+            junit '**/target/surefire-reports/*.xml'
+        }
         success {
             echo '✅ Build and tests completed successfully!'
         }
@@ -29,3 +33,4 @@ pipeline {
         }
     }
 }
+
